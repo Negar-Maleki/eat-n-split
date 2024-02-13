@@ -2,6 +2,7 @@
   "name": "eat-and-split",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://negar-maleki.github.io/eat-n-split",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
