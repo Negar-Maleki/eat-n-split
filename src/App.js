@@ -69,6 +69,7 @@ export default function App() {
         <FormSplitBill
           selectedFriend={selectedFriend}
           onSplitBill={handleSplitBill}
+          key={selectedFriend.id}
         />
       )}
     </div>
@@ -147,23 +148,25 @@ function FormAddFriend({ onAddFriends }) {
   }
 
   return (
-    <form className="form-add-friend" onSubmit={handleSubmit}>
-      <label>Friend name</label>
-      <input
-        type="text"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
+    <div>
+      <form className="form-add-friend" onSubmit={handleSubmit}>
+        <label>Friend name</label>
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
 
-      <label>Image URL</label>
-      <input
-        type="text"
-        value={image}
-        onChange={(e) => setImage(e.target.value)}
-      />
+        <label>Image URL</label>
+        <input
+          type="text"
+          value={image}
+          onChange={(e) => setImage(e.target.value)}
+        />
 
-      <Button>Add</Button>
-    </form>
+        <Button>Add</Button>
+      </form>
+    </div>
   );
 }
 
